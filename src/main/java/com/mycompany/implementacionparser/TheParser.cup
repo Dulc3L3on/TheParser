@@ -3,7 +3,7 @@ import java_cup.runtime.*;
 
 class theParser;
 parser code{:
-    public parser_Figuras (lexer_Figuras lexer){//Esto no es necesario pues el lexer.java extiende de Scanner
+    public TheParser (lexer_Figuras lexer){//Esto no es necesario pues el lexer.java extiende de Scanner
         super(lexer);
         recolectorFiguras = new RecolectorFiguras();/*agregado*/
     }

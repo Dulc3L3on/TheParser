@@ -11,10 +11,7 @@ import java.io.StringReader;
  *
  * @author phily
  */
-public class Parser {
-    
-        
-    
+public class Parser {               
     /**
      * @param args the command line arguments
      */
@@ -23,19 +20,9 @@ public class Parser {
         StringReader lector = new StringReader(entrada);
         
         Lexer lexer = new Lexer(lector);
+        Estados estados = new Estados(lexer);   
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    }
-    
-    
-    
-    
+        estados.E();
+    }           
 }
+
