@@ -1,0 +1,32 @@
+package com.mycompany.implementacionparser;
+import java_cup.runtime.*;
+
+class theParser;
+parser code{:
+    public parser_Figuras (lexer_Figuras lexer){//Esto no es necesario pues el lexer.java extiende de Scanner
+        super(lexer);
+        recolectorFiguras = new RecolectorFiguras();/*agregado*/
+    }
+:}
+
+terminal Parentesis_abierto, Parentesis_cerrado, Suma, Por, Numero, Identificador;
+non terminal E, Ep, T, Tp, F;
+
+E ::= T Ep
+    ;
+
+Ep ::= Suma T Ep
+    | 
+    ;
+
+T ::= F Tp
+    ;
+
+Tp ::= Por F Tp
+    | 
+    ;
+
+F ::= Identificador
+    | Numero
+    | Parentesis_abierto E Parentesis_cerrado
+    ;
